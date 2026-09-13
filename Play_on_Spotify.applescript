@@ -4,28 +4,12 @@
 # Search for Run AppleScript in Search Actions
 
 on run {input, parameters}
-	set songName to input as string
+	set songName to input as text
 	
-	tell application "Spotify"
-		activate
-		-- Start playing search context
-		play track ("spotify:search:" & songName)
-		
-		-- Wait for Spotify to actually start playing the track
-		set counter to 0
-		repeat until (player state is playing) or counter ≥ 20
-			delay 0.2
-			set counter to counter + 1
-		end repeat
-		
-		delay 0.5
-		
-		-- Extract exact track URI and play it isolated
-		try
-			set exactTrackURI to spotify url of current track
-			play track exactTrackURI
-		end try
-	end tell
+	set pythonPath to "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3"
+	set scriptPath to (POSIX path of (path to home folder)) & "spotify-siri/spotify_siri.py"
 	
-	return input
+	do shell script quoted form of pythonPath & " " & quoted form of scriptPath & " " & quoted form of songName
+	
+	return
 end run
