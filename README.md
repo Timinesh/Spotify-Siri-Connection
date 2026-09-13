@@ -1,6 +1,6 @@
 <img width="1448" height="731" alt="image" src="https://github.com/user-attachments/assets/c6a1be12-1368-4799-a78a-cfd6073687fe" />
 
-Put this in Spotify API Dashboard
+# Put this in Spotify API Dashboard
 
 # Run spotify_siri.py
 # Then Play_on_Spotify.applescript
