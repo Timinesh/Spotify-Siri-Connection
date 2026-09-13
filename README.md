@@ -2,6 +2,6 @@
 
 Put this in Spotify API Dashboard
 
-Run spotify_siri.py
-Then Play_on_Spotify.applescript
-Everything else in any order
+# Run spotify_siri.py
+# Then Play_on_Spotify.applescript
+# Everything else in any order
